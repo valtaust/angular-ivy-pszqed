@@ -9,7 +9,7 @@ import { HomePage } from '../app/home/home.page';
 
 import { RouterModule } from '@angular/router';
 //import { TestModule } from '../app/TestModule';
-import { WeatherServService } from '../app/weather.service';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -25,10 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
       //{ path: 'SettingsPage', component: SettingsPage },
     ]),
   ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    WeatherServService,
-  ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
 })
